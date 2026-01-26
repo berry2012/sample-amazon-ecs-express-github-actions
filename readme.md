@@ -1,6 +1,12 @@
-# Retail Store UI Application Deployment to Amazon ECS Express Mode 
+# Automated deployments with GitHub Actions for Amazon ECS Express Mode service
 
-This project demonstrates deploying the famous Retail Store UI Application to Amazon ECS Express Mode with automated deployment pipeline using GitHub Actions.
+## Sample Application
+
+- The [AWS Containers Retail Sample](https://github.com/aws-containers/retail-store-sample-app/tree/main) UI Application Deployment to Amazon ECS Express Mode 
+
+The UI original Dockerfile is available [here](https://github.com/aws-containers/retail-store-sample-app/blob/main/src/ui/Dockerfile)
+
+This project demonstrates deploying the famous Retail Store UI Application to Amazon ECS Express Mode with automated deployment pipeline using Amazon ECS "Deploy Express Service" Action for GitHub Actions
 
 ## Architecture Overview
 
@@ -61,3 +67,5 @@ With the basic GitHub Actions workflow in `.github/workflows` you can establish 
 ## Learn More
 
 - [Amazon ECS Documentation](https://docs.aws.amazon.com/ecs/)
+- [Amazon ECS "Deploy Express Service" Action for GitHub Actions](https://github.com/marketplace/actions/amazon-ecs-deploy-express-service-action-for-github-actions#overview)
+- [Best practices for Amazon ECS Express Mode services](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/express-service-best-practices.html)
