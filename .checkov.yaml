@@ -1,0 +1,19 @@
+# Checkov configuration file for suppressing false positive security findings
+# Documentation: https://www.checkov.io/2.Basics/Suppressing%20and%20Skipping%20Policies.html
+
+# Skip specific checks across the entire repository
+skip-check:
+  # Docker checks
+  - CKV_DOCKER_3  # Base image already implements non-root user - https://github.com/aws-containers/retail-store-sample-app/blob/main/src/ui/Dockerfile
+  - CKV_DOCKER_2  # HEALTHCHECK not required - ECS/ALB handles health checks at infrastructure layer
+  
+  # GitHub Actions checks
+  - CKV2_GHA_1    # Write permissions required for deployment workflow (id-token:write for OIDC, contents:read for checkout)
+
+# Optional: Soft-fail mode (report but don't fail the build)
+# soft-fail: true
+
+# Optional: Set specific framework to scan
+# framework:
+#   - github_actions
+#   - dockerfile
