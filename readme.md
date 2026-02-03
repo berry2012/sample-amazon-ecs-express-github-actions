@@ -51,6 +51,9 @@ Navigate to your GitHub repository on the GitHub website. Go to **Settings** →
 | `ECS_SERVICE` | `my-app-service` | Name for your Amazon ECS service |
 | `ECS_CLUSTER` | `my-cluster` | Name for your Amazon ECS cluster |
 
+The action will:
+- Check if the specified cluster exists (creates it if using the default cluster)
+Note: To specify an existing Amazon ECS cluster name other than default, you must [create the cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-cluster-console-v2.html) beforehand.
 
 **** 
 **Estimated time:** 20-30 minutes
