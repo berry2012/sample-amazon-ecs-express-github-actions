@@ -49,7 +49,7 @@ Navigate to your GitHub repository on the GitHub website. Go to **Settings** →
 | `AWS_ACCOUNT_ID` | `123456789012` | Your 12-digit AWS account ID |
 | `ECR_REPOSITORY` | `my-app` | Name of your Amazon ECR repository |
 | `ECS_SERVICE` | `my-app-service` | Name for your Amazon ECS service |
-| `ECS_CLUSTER` | `default` | Name for your Amazon ECS cluster |
+| `ECS_CLUSTER` | `my-cluster` | Name for your Amazon ECS cluster |
 
 
 **** 
