@@ -37,7 +37,7 @@ your-app/
 - Docker installed locally
 - A default [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/) (Amazon VPC) and default subnets, otherwise, see [Create a default VPC](https://docs.aws.amazon.com/vpc/latest/userguide/work-with-default-vpc.html#create-default-vpc)
 - First, [create an OpenID Connect provider to allow GitHub Actions](https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws) to assume an [IAM role](https://github.com/marketplace/actions/amazon-ecs-deploy-express-service-action-for-github-actions#github-actions-role), then create the IAM Role with [ECS Express](https://github.com/marketplace/actions/amazon-ecs-deploy-express-service-action-for-github-actions#github-actions-role) and [ECR Permissions](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_ECS.html).
-- Create the [two IAM roles](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/express-service-getting-started.html) required by an Express Mode service. The Task Execution Role and the Infrastructure Role.
+- Create the [two IAM roles](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/express-service-getting-started.html) required by an Express Mode service. The Task Execution Role (ecsTaskExecutionRole) and the Infrastructure Role (ecsInfrastructureRoleForExpressServices).
 - Configure GitHub repository variables
 
 Your GitHub Actions workflow references your AWS account details and resource names through repository variables. Since these values aren’t sensitive, you can store them as variables rather than secrets, making them easier to reference in your workflow file.
